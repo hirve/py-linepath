@@ -3,7 +3,7 @@ Python library of linepath geometry.
 The addition for https://github.com/hirve/py-functional-mill to limit cut area by a shape, where the shape is a path from lines.
 
 ### Features
-- Creating an enclosed shape from path of lines.
+- Creating an enclosed shape from path of lines (polyline).
   ```python
   from geometry import EnclosedShape
   SRC_PATH = [ [ -20, -10 ], [ -10, 55 ], [ 70, 55 ], [ 75, -25 ] ]
