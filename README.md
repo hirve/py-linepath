@@ -9,6 +9,13 @@ The addition for https://github.com/hirve/py-functional-mill to limit cut area b
   SRC_PATH = [ [ -20, -10 ], [ -10, 55 ], [ 70, 55 ], [ 75, -25 ] ]
   shape = EnclosedShape(SRC_PATH);
   ```
+- Taking bounding box of the shape.
+  ```python
+  box = shape.getBoundingBox()
+  print(box)
+  # ({'min': -20, 'max': 75}, {'min': -25, 'max': 55})
+  ```
+  
 - Moving, scaling, rotation of the shape.
   ```python
   shape.scaleTo([ 50, 40 ], [ 190, 40 ])
@@ -18,10 +25,6 @@ The addition for https://github.com/hirve/py-functional-mill to limit cut area b
 
   # Builder style
   shape.reset().moveTo([ 50, 40 ], [ 150, -20 ]).rotate([ 50, 40 ], -math.pi / 12)
-  ```
-- Taking bounding box of the shape.
-  ```python
-  box = shape.getBoundingBox()
   ```
 - Testing if the point is inside the shape.
   ```python
